@@ -20,8 +20,7 @@ It includes **JWT-based authentication**, **task CRUD operations**, and a unique
 1. Clone the repo, install dependencies, configure `.env`, and start the server:  
 
 ```bash
-git clone https://github.com/your-username/task-management-api.git
-
+git clone https://github.com/DeveshDighe/WeatherWise-Task-Scheduler.git
 npm install
 
 # Create a .env file and add the following:
