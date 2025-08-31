@@ -1,0 +1,49 @@
+@PORT=4000
+@HOST=localhost
+
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGIyZjEzZDkyOGNkZjExYjVjYjU5ZGMiLCJpYXQiOjE3NTY2MTEwOTMsImV4cCI6MTc1NjYxNDY5M30.uPOBMV1IaPm4JASEE8s0nwQ46sgBUZp_HIjjVR7Gff4
+
+### Create Task
+POST http://{{HOST}}:{{PORT}}/api/tasks/create
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "title": "Play Cricket",
+  "description": "Play Cricket in the ground",
+  "isOutdoor" : true,
+  "status" : "pending"
+}
+
+### Get Tasks for specific user 
+GET http://{{HOST}}:{{PORT}}/api/tasks/get/all
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### Edit Task
+PUT http://{{HOST}}:{{PORT}}/api/tasks/edit/68b3b006c88a42b0b1958ee4
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "title": "Play Cricket",
+  "description": "Play Cricket in the ground",
+  "isOutdoor" : true,
+  "status" : "completed"
+}
+
+### Create Task
+DELETE http://{{HOST}}:{{PORT}}/api/tasks/delete/68b3ac34fe7e2164f37542b5
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### Get Tasks Summary 
+GET http://{{HOST}}:{{PORT}}/api/tasks/summary
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+### Edit Task
+PATCH http://{{HOST}}:{{PORT}}/api/tasks/68b3c7cce3bed77e43504952/complete
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+

@@ -1,0 +1,33 @@
+@PORT=4000
+@HOST=localhost
+
+@TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OGIyZmQ3NTIwNDQ1Y2E1MWFhOWMwYWQiLCJpYXQiOjE3NTY1NjA3NTcsImV4cCI6MTc1NjU2NDM1N30.ty8-e5m5moH5A1Vkc4AQuNKtjLtJ1OvQGz5WC5UtXi8
+
+### Register User
+POST http://{{HOST}}:{{PORT}}/api/user/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johjn@example.com",
+  "city" : "mumbai",
+  "password" : "ramesh123"
+}
+
+
+### Login User
+POST http://{{HOST}}:{{PORT}}/api/user/login
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "password" : "ramesh123"
+}
+
+
+###  User Info
+GET http://{{HOST}}:{{PORT}}/api/user
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+
